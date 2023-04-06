@@ -10,10 +10,7 @@ body{
 	font-size: 5em;
 	font-family: sans-serif;
 	margin-top: 100px;
-	/*animation-name: "anin";
-	animation-duration: 0.5s;
-	animation-iteration-count: 1;*/
-	animation: anin 0.5s infinite;
+	animation: anin 0.5s 1;
 }
 
 
