@@ -51,4 +51,8 @@ body{
 	75%{transform: rotate(10deg);}
 	1000%{transform: rotate(-6deg);}
 }
+
+#elem{
+	font-size: 2em;
+	font-family: sans-serif;
 }
