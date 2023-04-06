@@ -16,11 +16,11 @@ function re(){
 	var resul = actividades[Math.floor(Math.random() * actividades.length)];
 	text.innerText=resul;
 	if (p == true){
-		text.style="animation-name:'inan'"
+		text.style="animation-name:inan"
 		p = false;
 	}
 	else{
-		text.style="animation-name:'anin'"
+		text.style="animation-name:anin"
 		p = true;
 	}
 
