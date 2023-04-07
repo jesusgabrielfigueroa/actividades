@@ -9,9 +9,8 @@ btn.addEventListener("click", re);
 c.addEventListener("click", borrar);
 ad.addEventListener("click", add);
 var p = true;
-var elemtex = ""
-
-
+var elemtex = "";
+text.innerText = "click";
 
 
 function re(){
@@ -38,14 +37,21 @@ function re(){
 }
 
 function add(){
-	let con ={ title: prompt("diga una actividad"), cuenta: 0}
-	actividades.push(con);
-	con = ""
-	actividades.forEach(function(item, index){
-	elemtex += item.title + ": " + item.cuenta + "\n";
-	})
-	elem.innerText=elemtex;
 	elemtex = "";
+	var con ={ title: prompt("diga una actividad"), cuenta: 0}
+	if(con.title == null || con.title == ""){
+		alert("no ingreso nada");
+	}
+	else{
+		actividades.push(con);
+		con = ""
+		actividades.forEach(function(item, index){
+		elemtex += item.title + ": " + item.cuenta + "\n";
+		})
+		elem.innerText=elemtex;
+		elemtex = "";
+	}
+
 }
 
 
