@@ -38,7 +38,7 @@ function re(){
 
 function add(){
 	elemtex = "";
-	var con ={ title: prompt("diga una actividad"), cuenta: 0}
+	var con ={ title: prompt("Escribe una palabra"), cuenta: 0}
 	if(con.title == null || con.title == ""){
 		alert("no ingreso nada");
 	}
