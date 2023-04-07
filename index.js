@@ -1,18 +1,15 @@
 const text = document.getElementById("text");
 const btn = document.getElementById("btn");
 const elem = document.getElementById("elem");
-var questions = parseInt(prompt("¿cuantas actividades tienes en mente?"));
+const c = document.getElementById("c");
+const ad = document.getElementById("+");
+var questions = "";
 var actividades = [];
 btn.addEventListener("click", re);
+c.addEventListener("click", borrar);
+ad.addEventListener("click", add);
 var p = true;
 var elemtex = ""
-
-
-for (let i = 0; i < questions; i++){
-	let con ={ title: prompt("diga una actividad"), cuenta: 0}
-	actividades.push(con);
-	con = ""
-}
 
 
 
@@ -38,9 +35,27 @@ function re(){
 		p = true;
 	}
 
-
-	
 }
+
+function add(){
+	let con ={ title: prompt("diga una actividad"), cuenta: 0}
+	actividades.push(con);
+	con = ""
+	actividades.forEach(function(item, index){
+	elemtex += item.title + ": " + item.cuenta + "\n";
+	})
+	elem.innerText=elemtex;
+	elemtex = "";
+}
+
+
+
+function borrar(){
+	actividades = [];
+	text.innerText="click";
+	elem.innerText="";
+}
+
 
 
 
